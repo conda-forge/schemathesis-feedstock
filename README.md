@@ -1,11 +1,11 @@
-About schemathesis
-==================
+About schemathesis-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/schemathesis-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/schemathesis/schemathesis
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/schemathesis-feedstock/blob/main/LICENSE.txt)
 
 Summary: Property-based testing framework for Open API and GraphQL based apps
 
