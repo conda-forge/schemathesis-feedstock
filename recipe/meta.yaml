@@ -1,5 +1,5 @@
 {% set name = "schemathesis" %}
-{% set version = "3.25.0" %}
+{% set version = "3.25.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
-  sha256: 40e77863c89e81ae997a28f2e101fc9ca94e48e48be56053e647b7b52e8435e6
+  sha256: d456d612000993518a8cdb2d92efef317c3161a08d51b243be9aabe7f38a7828
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ requirements:
     - junit-xml >=1.9,<2.0
     - pyrate-limiter >=2.10,<3.0
     - pytest-subtests >=0.2.1,<0.8.0
-    - pytest >=4.6.4,<8
+    - pytest >=4.6.4,<9
     - pyyaml >=5.1,<7.0
     - requests >=2.22,<3
     - starlette >=0.13,<1
