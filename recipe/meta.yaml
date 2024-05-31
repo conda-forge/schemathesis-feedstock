@@ -1,5 +1,5 @@
 {% set name = "schemathesis" %}
-{% set version = "3.28.1" %}
+{% set version = "3.29.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
-  sha256: 940ed1858bc61f9eddb5b84ac26e15c1e0ff59b4a2b2f34dd58e4cd612aeed3e
+  sha256: a36fc7eddb90978a5afaf3b87978a7f4387ca81088fd995b9a2c79c5470b3e75
 
 build:
   noarch: python
