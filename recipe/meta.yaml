@@ -28,7 +28,7 @@ requirements:
     - click >=7.0,<9.0
     - colorama >=0.4,<1.0
     - httpx >=0.22.0,<1.0
-    - hypothesis >=6.84.3,<7
+    - hypothesis >=6.103.4,<7
     - hypothesis-graphql >=0.11.0,<1
     - hypothesis-jsonschema >=0.23.1,<0.24
     - jsonschema >=4.18.0,<5.0
@@ -45,6 +45,9 @@ requirements:
     - werkzeug >=0.16.0,<4
     - yarl >=1.5,<2.0
 
+    # for hypothesis[tzdata]
+    - python-tzdata
+  
 test:
   imports:
     - schemathesis
