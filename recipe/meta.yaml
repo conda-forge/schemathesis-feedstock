@@ -1,5 +1,5 @@
 {% set name = "schemathesis" %}
-{% set version = "3.30.1" %}
+{% set version = "3.30.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
-  sha256: 2c0c1de0b15172cfb2fb4f721e476120d3205c4aab71f666738481c2f631477f
+  sha256: 78e39451740bd5f24d3ef26b7fe4c8e94d5307ed23573908332761042b96a139
 
 build:
   noarch: python
@@ -47,7 +47,7 @@ requirements:
 
     # for hypothesis[tzdata]
     - python-tzdata
-  
+
 test:
   imports:
     - schemathesis
