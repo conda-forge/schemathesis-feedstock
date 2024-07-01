@@ -1,5 +1,5 @@
 {% set name = "schemathesis" %}
-{% set version = "3.30.4" %}
+{% set version = "3.31.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
-  sha256: 96922684e056e3d743cf9e44c5db0c597897a13f0f8e4ba8cdbde1e18309a358
+  sha256: 334068ff2d39f6bad46cd61e6e1fb64e55042da9fc727a5ba8d5e2789fbf73a6
 
 build:
   noarch: python
@@ -44,6 +44,7 @@ requirements:
     - tomli >=2.0.1,<3.0
     - werkzeug >=0.16.0,<4
     - yarl >=1.5,<2.0
+    - harfile >=0.3.0,<1.0
 
     # for hypothesis[tzdata]
     - python-tzdata
