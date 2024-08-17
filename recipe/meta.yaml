@@ -1,5 +1,5 @@
 {% set name = "schemathesis" %}
-{% set version = "3.33.3" %}
+{% set version = "3.34.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
-  sha256: 52cc8ebee0580c580097e7c6cf34e5539a612604cd1f28c784e3933a9d76560c
+  sha256: 97fa32bfc749e937ee95f8665ebed19153165591992dd8019be99bbde9924317
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - harfile >=0.3.0,<1.0
     - httpx >=0.22.0,<1.0
     - hypothesis >=6.103.4,<7
-    - hypothesis-graphql >=0.11.0,<1
+    - hypothesis-graphql >=0.11.1,<1
     - hypothesis-jsonschema >=0.23.1,<0.24
     - jsonschema >=4.18.0,<5.0
     - junit-xml >=1.9,<2.0
