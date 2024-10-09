@@ -1,5 +1,5 @@
 {% set name = "schemathesis" %}
-{% set version = "3.36.4" %}
+{% set version = "3.37.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
-  sha256: 7cbb2e077d166a35ea6bfc80b736cb089e4369e115e788e25f52f295237a0568
+  sha256: 0333141cba48f8a9fc15894d57078b1baaac36e2582199113899840685005dfa
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ requirements:
     - jsonschema >=4.18.0,<5.0
     - junit-xml >=1.9,<2.0
     - pyrate-limiter >=2.10,<4.0
-    - pytest-subtests >=0.2.1,<0.8.0
+    - pytest-subtests >=0.2.1,<0.14.0
     - pytest >=4.6.4,<9
     - pyyaml >=5.1,<7.0
     - requests >=2.22,<3
