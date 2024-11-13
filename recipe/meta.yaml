@@ -1,13 +1,13 @@
 {% set name = "schemathesis" %}
-{% set version = "3.38.5" %}
+{% set version = "3.38.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
-  sha256: 29ebcc6cbd1d5b5ca0619dca4f8b26565378110742398619497dd07cb5fbbd25
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
+  sha256: c05beea65de8e1659625fcf0624c898781ebaecc63ffc1f1a5dfc15bf5a4b266
 
 build:
   noarch: python
@@ -21,9 +21,9 @@ requirements:
   host:
     - pip
     - hatchling
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - backoff >=2.1.2,<3.0
     - click >=7.0,<9.0
     - colorama >=0.4,<1.0
@@ -58,6 +58,7 @@ test:
     - st --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/schemathesis/schemathesis
