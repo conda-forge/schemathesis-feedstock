@@ -1,29 +1,33 @@
-{% set name = "schemathesis" %}
-{% set version = "3.39.16" %}
+schema_version: 1
+
+context:
+  name: schemathesis
+  version: 3.39.16
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/schemathesis-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/schemathesis-${{ version }}.tar.gz
   sha256: d903368786e745ad151924d4e2e883a8b158332e60af56cd623d88d08ad55076
 
 build:
-  noarch: python
-  entry_points:
-    - schemathesis = schemathesis.cli:schemathesis
-    - st = schemathesis.cli:schemathesis
-  script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - schemathesis = schemathesis.cli:schemathesis
+      - st = schemathesis.cli:schemathesis
 
 requirements:
   host:
     - pip
     - hatchling
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - backoff >=2.1.2,<3.0
     - click >=7.0,<9.0
     - colorama >=0.4,<1.0
@@ -45,28 +49,29 @@ requirements:
     - tomli >=2.0.1,<3.0
     - werkzeug >=0.16.0,<4
     - yarl >=1.5,<2.0
-
     # for hypothesis[tzdata]
     - python-tzdata
 
-test:
-  imports:
-    - schemathesis
-  commands:
-    - pip check
-    - schemathesis --help
-    - st --help
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - schemathesis
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - schemathesis --help
+      - st --help
 
 about:
-  home: https://github.com/schemathesis/schemathesis
-  doc_url: https://schemathesis.readthedocs.io/
   summary: Property-based testing framework for Open API and GraphQL based apps
   license: MIT
   license_file:
     - LICENSE
+  homepage: https://github.com/schemathesis/schemathesis
+  documentation: https://schemathesis.readthedocs.io/
 
 extra:
   recipe-maintainers:
