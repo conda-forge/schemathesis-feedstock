@@ -57,7 +57,7 @@ requirements:
     - jsonpointer >1.13
     - rfc3339-validator
     - rfc3987
-    - uri_template
+    - uri-template
     - webcolors >=1.11
 
 tests:
