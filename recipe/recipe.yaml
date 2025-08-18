@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: schemathesis
-  version: "4.0.26"
+  version: "4.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/schemathesis-${{ version }}.tar.gz
-  sha256: a3969e35c36fd3a50a703dda9fbf3314a1689dfeb1f9e95c838a773d2faab361
+  sha256: f6e7f3624ac61015a1377fa6ee2d00fa9667a373945f944f9bd4aaf4f46df812
 
 build:
   number: 0
