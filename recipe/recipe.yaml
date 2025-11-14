@@ -39,7 +39,7 @@ requirements:
     - junit-xml >=1.9,<2.0
     - pyrate-limiter >=3.0,<4.0
     - pytest-subtests >=0.11.0,<0.15.0
-    - pytest >=8,<9
+    - pytest >=8,<10
     - pyyaml >=5.1,<7.0
     - requests >=2.22,<3
     - rich >=13.9.4
