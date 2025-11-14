@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: schemathesis
-  version: "4.4.4"
+  version: "4.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/schemathesis-${{ version }}.tar.gz
-  sha256: 04a8e495b458734e7fc61caa347a047f257db00af411d78531a318dcf7128179
+  sha256: c7ab2ee28d4f3b317f0f85e837f68e553dfa9e1cf5e5ad016c7ae98059ed4787
 
 build:
   number: 0
@@ -39,7 +39,7 @@ requirements:
     - junit-xml >=1.9,<2.0
     - pyrate-limiter >=3.0,<4.0
     - pytest-subtests >=0.11.0,<0.15.0
-    - pytest >=8,<9
+    - pytest >=8,<10
     - pyyaml >=5.1,<7.0
     - requests >=2.22,<3
     - rich >=13.9.4
