@@ -13,7 +13,7 @@ source:
   sha256: c7e0236f98e89f87743b3be18261052c1040858253f50239f829be623347f40c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -68,7 +68,7 @@ tests:
       python_version: ${{ python_min }}.*
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - schemathesis --help
       - st --help
