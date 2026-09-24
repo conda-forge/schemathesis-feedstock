@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: schemathesis
-  version: "4.26.1"
+  version: "4.28.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/schemathesis-${{ version }}.tar.gz
-  sha256: 1449302c1306ddebc5630271c09be62eb0a4c7d5985198ef68d359abad303ff9
+  sha256: 4a2f882dc614db41df0b73800a2e26754e00fff6e1086689a2db1755cc9e6eb4
 
 build:
   number: 0
@@ -33,9 +33,9 @@ requirements:
     - harfile >=0.5.0,<1.0
     - hypothesis >=6.130.12,<7
     - hypothesis-graphql >=0.13.2,<1
-    - jsonschema-rs >=0.55.1,<0.56.0
+    - jsonschema-rs >=0.57.1,<0.58.0
     - pyrate-limiter >=4.0,<5.0
-    - pytest >=9,<10
+    - pytest >=8.4,<10
     - pyyaml >=5.1,<7.0
     - requests >=2.22,<3
     - rich >=13.9.4
